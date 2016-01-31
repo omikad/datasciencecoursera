@@ -27,7 +27,7 @@ getData = function() {
 }
 
 readPart <- function(dir) {
-  "Read all data files do a list of data frames"
+  "Read all data files to a list of data frames"
   filePaths <- list(
     subject  = paste("UCI HAR Dataset", dir, paste("subject_", dir, ".txt", sep=""), sep="/"),
     features = paste("UCI HAR Dataset", dir, paste("x_", dir, ".txt", sep=""), sep="/"),
@@ -57,7 +57,7 @@ names(dataSet$subject) <- "subject"
 names(dataSet$activity) <- "activity"
 
 # 2. Extract only the measurements on the mean and standard deviation for each measurement.
-# Make valid names from loaded feature names and apply them
+# Read feature names
 featuresData <- read.table("UCI HAR Dataset/features.txt", header=FALSE, stringsAsFactors=FALSE)
 names(featuresData) <- c("rowindex", "feature")
 
