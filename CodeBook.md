@@ -11,15 +11,15 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Script `run_analysis.R` will produce file `UCI_HAR_tidy.csv` that contains the following features.
 
-Activity - activity performed by subject: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+`activity` - activity performed by subject: `WALKING`, `WALKING_UPSTAIRS`, `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, `LAYING`
 
-Subject - integer number of person
+`subject` - integer number of person
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals. These time domain signals (prefix 'time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (timeBodyAccelerometer-XYZ and timeGravityAccelerometer-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals. These time domain signals (prefix 'time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (`timeBodyAccelerometer-XYZ` and `timeGravityAccelerometer-XYZ`) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccelerometerJerk-XYZ and timeBodyGyroscopeJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccelerometerMagnitude, timeGravityAccelerometerMagnitude, timeBodyAccelerometerJerkMagnitude, timeBodyGyroscopeMagnitude, timeBodyGyroscopeJerkMagnitude). 
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (`timeBodyAccelerometerJerk-XYZ` and `timeBodyGyroscopeJerk-XYZ`). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (`timeBodyAccelerometerMagnitude`, `timeGravityAccelerometerMagnitude`, `timeBodyAccelerometerJerkMagnitude`, `timeBodyGyroscopeMagnitude`, `timeBodyGyroscopeJerkMagnitude`). 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing frequencyBodyAccelerometer-XYZ, frequencyBodyAccelerometerJerk-XYZ, frequencyBodyGyroscope-XYZ, frequencyBodyBodyAccelerometerJerkMagnitude, frequencyBodyBodyGyroscopeMagnitude, frequencyBodyBodyGyroscopeMagnitude.
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing `frequencyBodyAccelerometer-XYZ`, `frequencyBodyAccelerometerJerk-XYZ`, `frequencyBodyGyroscope-XYZ`, `frequencyBodyBodyAccelerometerJerkMagnitude`, `frequencyBodyBodyGyroscopeMagnitude`, `frequencyBodyBodyGyroscopeMagnitude`.
 
 The set of variables that were estimated from these signals are: 
 
