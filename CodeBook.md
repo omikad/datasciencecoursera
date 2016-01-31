@@ -22,9 +22,8 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing `frequencyBodyAccelerometer-XYZ`, `frequencyBodyAccelerometerJerk-XYZ`, `frequencyBodyGyroscope-XYZ`, `frequencyBodyBodyAccelerometerJerkMagnitude`, `frequencyBodyBodyGyroscopeMagnitude`, `frequencyBodyBodyGyroscopeMagnitude`.
 
 The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-angle(): Angle between to vectors.
+* mean(): Mean value
+* std(): Standard deviation
+* angle(): Angle between to vectors.
 
 Tidy data set contains average of each variable for each activity and each subject.
