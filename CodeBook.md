@@ -9,7 +9,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 # Features
 
-Script `run_analysis.R` will produce file `UCI_HAR_tidy.csv` that contains the following features:
+Script `run_analysis.R` will produce file `UCI_HAR_tidy.txt` that contains the following features:
 
 ```
 [1] "subject"                                       

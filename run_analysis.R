@@ -91,10 +91,8 @@ dataSet <- (dataSet
 #    of each variable for each activity and each subject.
 summaryData <- (dataSet %>% group_by(activity, subject) %>% summarize_each(funs(mean)))
 
-write.csv(summaryData, "UCI_HAR_tidy.csv")
-
 # This instruction creates file to submit
-# write.table(summaryData, "ToSubmit.txt", row.name=FALSE)
+write.table(summaryData, "UCI_HAR_tidy.txt", row.name=FALSE)
 
 
 
