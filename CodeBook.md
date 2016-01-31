@@ -112,7 +112,7 @@ The body acceleration signal obtained by subtracting the gravity from the total 
 
 # Transformation to original features
 
-Original features were transformed to a new set of features:
+Original features were renamed to a new set of features:
 
 |Original features|Transformed features|
 |-----------------|--------------------|
@@ -132,9 +132,9 @@ Original features were transformed to a new set of features:
 | fBodyAccMag mean,std | frequencyBodyAccelerometerMagnitudeMean [60], frequencyBodyAccelerometerMagnitudeStd [61] |
 | fBodyBodyAccJerkMag mean,std | frequencyBodyBodyAccelerometerJerkMagnitudeMean [62], frequencyBodyBodyAccelerometerJerkMagnitudeStd [63] |
 | fBodyBodyGyroMag mean,std | frequencyBodyBodyGyroscopeMagnitudeMean [64], frequencyBodyBodyGyroscopeMagnitudeStd [65] |
-| fBodyBodyGyroJerkMag mean,std | frequencyBodyBodyGyroscopeJerkMagnitudeMean [66], frequencyBodyBodyGyroscopeJerkMagnitudeMean [67] |
+| fBodyBodyGyroJerkMag mean,std | frequencyBodyBodyGyroscopeJerkMagnitudeMean [66], frequencyBodyBodyGyroscopeJerkMagnitudeStd [67] |
 
-Tidy data set contains average of each variable for each `activity [68]` and each `subject [1]`.
+Result is tidy data set contains average of each variable for each `activity [68]` and each `subject [1]`.
 
 
 
