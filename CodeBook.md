@@ -11,82 +11,148 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Script `run_analysis.R` will produce file `UCI_HAR_tidy.csv` that contains the following features:
 
-``` [1] "subject"                                        
- [2] "timeBodyAccelerometerMeanX"                     
- [3] "timeBodyAccelerometerMeanY"                     
- [4] "timeBodyAccelerometerMeanZ"                     
- [5] "timeBodyAccelerometerStdX"                      
- [6] "timeBodyAccelerometerStdY"                      
- [7] "timeBodyAccelerometerStdZ"                      
- [8] "timeGravityAccelerometerMeanX"                  
- [9] "timeGravityAccelerometerMeanY"                  
+``` [1] "subject"                        
+                
+[2] "timeBodyAccelerometerMeanX"                     
+
+[3] "timeBodyAccelerometerMeanY"                     
+
+[4] "timeBodyAccelerometerMeanZ"                     
+
+[5] "timeBodyAccelerometerStdX"                      
+
+[6] "timeBodyAccelerometerStdY"                      
+
+[7] "timeBodyAccelerometerStdZ"                      
+
+[8] "timeGravityAccelerometerMeanX"                  
+
+[9] "timeGravityAccelerometerMeanY"                  
+
 [10] "timeGravityAccelerometerMeanZ"                  
+
 [11] "timeGravityAccelerometerStdX"                   
+
 [12] "timeGravityAccelerometerStdY"                   
+
 [13] "timeGravityAccelerometerStdZ"                   
+
 [14] "timeBodyAccelerometerJerkMeanX"                 
+
 [15] "timeBodyAccelerometerJerkMeanY"                 
+
 [16] "timeBodyAccelerometerJerkMeanZ"                 
+
 [17] "timeBodyAccelerometerJerkStdX"                  
+
 [18] "timeBodyAccelerometerJerkStdY"                  
+
 [19] "timeBodyAccelerometerJerkStdZ"                  
+
 [20] "timeBodyGyroscopeMeanX"                         
+
 [21] "timeBodyGyroscopeMeanY"                         
+
 [22] "timeBodyGyroscopeMeanZ"                         
+
 [23] "timeBodyGyroscopeStdX"                          
+
 [24] "timeBodyGyroscopeStdY"                          
+
 [25] "timeBodyGyroscopeStdZ"                          
+
 [26] "timeBodyGyroscopeJerkMeanX"                     
+
 [27] "timeBodyGyroscopeJerkMeanY"                     
+
 [28] "timeBodyGyroscopeJerkMeanZ"                     
+
 [29] "timeBodyGyroscopeJerkStdX"                      
+
 [30] "timeBodyGyroscopeJerkStdY"                      
+
 [31] "timeBodyGyroscopeJerkStdZ"                      
+
 [32] "timeBodyAccelerometerMagnitudeMean"             
+
 [33] "timeBodyAccelerometerMagnitudeStd"              
+
 [34] "timeGravityAccelerometerMagnitudeMean"          
+
 [35] "timeGravityAccelerometerMagnitudeStd"           
+
 [36] "timeBodyAccelerometerJerkMagnitudeMean"         
+
 [37] "timeBodyAccelerometerJerkMagnitudeStd"          
+
 [38] "timeBodyGyroscopeMagnitudeMean"                 
+
 [39] "timeBodyGyroscopeMagnitudeStd"                  
+
 [40] "timeBodyGyroscopeJerkMagnitudeMean"             
+
 [41] "timeBodyGyroscopeJerkMagnitudeStd"              
+
 [42] "frequencyBodyAccelerometerMeanX"                
+
 [43] "frequencyBodyAccelerometerMeanY"                
+
 [44] "frequencyBodyAccelerometerMeanZ"                
+
 [45] "frequencyBodyAccelerometerStdX"                 
+
 [46] "frequencyBodyAccelerometerStdY"                 
+
 [47] "frequencyBodyAccelerometerStdZ"                 
+
 [48] "frequencyBodyAccelerometerJerkMeanX"            
+
 [49] "frequencyBodyAccelerometerJerkMeanY"            
+
 [50] "frequencyBodyAccelerometerJerkMeanZ"            
+
 [51] "frequencyBodyAccelerometerJerkStdX"             
+
 [52] "frequencyBodyAccelerometerJerkStdY"             
+
 [53] "frequencyBodyAccelerometerJerkStdZ"             
+
 [54] "frequencyBodyGyroscopeMeanX"                    
+
 [55] "frequencyBodyGyroscopeMeanY"                    
+
 [56] "frequencyBodyGyroscopeMeanZ"                    
+
 [57] "frequencyBodyGyroscopeStdX"                     
+
 [58] "frequencyBodyGyroscopeStdY"                     
+
 [59] "frequencyBodyGyroscopeStdZ"                     
+
 [60] "frequencyBodyAccelerometerMagnitudeMean"        
+
 [61] "frequencyBodyAccelerometerMagnitudeStd"         
+
 [62] "frequencyBodyBodyAccelerometerJerkMagnitudeMean"
+
 [63] "frequencyBodyBodyAccelerometerJerkMagnitudeStd" 
+
 [64] "frequencyBodyBodyGyroscopeMagnitudeMean"        
+
 [65] "frequencyBodyBodyGyroscopeMagnitudeStd"         
+
 [66] "frequencyBodyBodyGyroscopeJerkMagnitudeMean"    
 [67] "frequencyBodyBodyGyroscopeJerkMagnitudeStd"     
+
 [68] "activity"     ```      
 
-`subject [1]` - integer number of person
+`subject [1]` - integer identifier of person who performed the activity for each window sample. Its range is from 1 to 30. 
 
 `activity [68]` - activity performed by subject: `WALKING`, `WALKING_UPSTAIRS`, `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, `LAYING`
 
-Other features was made using original features from source data set
+Other features were made using original features from source data set
 
-# Features origin
+# Original Features
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -101,6 +167,12 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 The set of variables that were estimated from these signals are: 
 * mean(): Mean value
 * std(): Standard deviation
+
+Features are normalized and bounded within [-1,1].
+
+The acceleration signal from the smartphone accelerometer X,Y,Z axis in standard gravity units 'g'.
+
+The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 
 # Transformation to original features
 
