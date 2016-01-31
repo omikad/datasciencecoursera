@@ -12,79 +12,79 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Script `run_analysis.R` will produce file `UCI_HAR_tidy.txt` that contains the following features:
 
 ```
-[1] "subject"                                       
-[2] "timeBodyAccelerometerMeanX"                     
-[3] "timeBodyAccelerometerMeanY"                     
-[4] "timeBodyAccelerometerMeanZ"                     
-[5] "timeBodyAccelerometerStdX"                      
-[6] "timeBodyAccelerometerStdY"                      
-[7] "timeBodyAccelerometerStdZ"                      
-[8] "timeGravityAccelerometerMeanX"                  
-[9] "timeGravityAccelerometerMeanY"                  
-[10] "timeGravityAccelerometerMeanZ"                 
-[11] "timeGravityAccelerometerStdX"                   
-[12] "timeGravityAccelerometerStdY"                   
-[13] "timeGravityAccelerometerStdZ"                   
-[14] "timeBodyAccelerometerJerkMeanX"                 
-[15] "timeBodyAccelerometerJerkMeanY"                 
-[16] "timeBodyAccelerometerJerkMeanZ"                 
-[17] "timeBodyAccelerometerJerkStdX"                  
-[18] "timeBodyAccelerometerJerkStdY"                  
-[19] "timeBodyAccelerometerJerkStdZ"                  
-[20] "timeBodyGyroscopeMeanX"                         
-[21] "timeBodyGyroscopeMeanY"                         
-[22] "timeBodyGyroscopeMeanZ"                         
-[23] "timeBodyGyroscopeStdX"                          
-[24] "timeBodyGyroscopeStdY"                          
-[25] "timeBodyGyroscopeStdZ"                          
-[26] "timeBodyGyroscopeJerkMeanX"                     
-[27] "timeBodyGyroscopeJerkMeanY"                     
-[28] "timeBodyGyroscopeJerkMeanZ"                     
-[29] "timeBodyGyroscopeJerkStdX"                      
-[30] "timeBodyGyroscopeJerkStdY"                      
-[31] "timeBodyGyroscopeJerkStdZ"                      
-[32] "timeBodyAccelerometerMagnitudeMean"             
-[33] "timeBodyAccelerometerMagnitudeStd"              
-[34] "timeGravityAccelerometerMagnitudeMean"          
-[35] "timeGravityAccelerometerMagnitudeStd"           
-[36] "timeBodyAccelerometerJerkMagnitudeMean"         
-[37] "timeBodyAccelerometerJerkMagnitudeStd"          
-[38] "timeBodyGyroscopeMagnitudeMean"                 
-[39] "timeBodyGyroscopeMagnitudeStd"                  
-[40] "timeBodyGyroscopeJerkMagnitudeMean"             
-[41] "timeBodyGyroscopeJerkMagnitudeStd"              
-[42] "frequencyBodyAccelerometerMeanX"                
-[43] "frequencyBodyAccelerometerMeanY"                
-[44] "frequencyBodyAccelerometerMeanZ"                
-[45] "frequencyBodyAccelerometerStdX"                 
-[46] "frequencyBodyAccelerometerStdY"                 
-[47] "frequencyBodyAccelerometerStdZ"                 
-[48] "frequencyBodyAccelerometerJerkMeanX"            
-[49] "frequencyBodyAccelerometerJerkMeanY"            
-[50] "frequencyBodyAccelerometerJerkMeanZ"            
-[51] "frequencyBodyAccelerometerJerkStdX"             
-[52] "frequencyBodyAccelerometerJerkStdY"             
-[53] "frequencyBodyAccelerometerJerkStdZ"             
-[54] "frequencyBodyGyroscopeMeanX"                    
-[55] "frequencyBodyGyroscopeMeanY"                    
-[56] "frequencyBodyGyroscopeMeanZ"                    
-[57] "frequencyBodyGyroscopeStdX"                     
-[58] "frequencyBodyGyroscopeStdY"                     
-[59] "frequencyBodyGyroscopeStdZ"                     
-[60] "frequencyBodyAccelerometerMagnitudeMean"        
-[61] "frequencyBodyAccelerometerMagnitudeStd"         
-[62] "frequencyBodyBodyAccelerometerJerkMagnitudeMean"
-[63] "frequencyBodyBodyAccelerometerJerkMagnitudeStd" 
-[64] "frequencyBodyBodyGyroscopeMagnitudeMean"        
-[65] "frequencyBodyBodyGyroscopeMagnitudeStd"         
-[66] "frequencyBodyBodyGyroscopeJerkMagnitudeMean"    
-[67] "frequencyBodyBodyGyroscopeJerkMagnitudeStd"    
-[68] "activity"     
+[1] "subject"                           
+[2] "activity"            
+[3] "timeBodyAccelerometerMeanX"                     
+[4] "timeBodyAccelerometerMeanY"                     
+[5] "timeBodyAccelerometerMeanZ"                     
+[6] "timeBodyAccelerometerStdX"                      
+[7] "timeBodyAccelerometerStdY"                      
+[8] "timeBodyAccelerometerStdZ"                      
+[9] "timeGravityAccelerometerMeanX"                  
+[10] "timeGravityAccelerometerMeanY"                  
+[11] "timeGravityAccelerometerMeanZ"                 
+[12] "timeGravityAccelerometerStdX"                   
+[13] "timeGravityAccelerometerStdY"                   
+[14] "timeGravityAccelerometerStdZ"                   
+[15] "timeBodyAccelerometerJerkMeanX"                 
+[16] "timeBodyAccelerometerJerkMeanY"                 
+[17] "timeBodyAccelerometerJerkMeanZ"                 
+[18] "timeBodyAccelerometerJerkStdX"                  
+[19] "timeBodyAccelerometerJerkStdY"                  
+[20] "timeBodyAccelerometerJerkStdZ"                  
+[21] "timeBodyGyroscopeMeanX"                         
+[22] "timeBodyGyroscopeMeanY"                         
+[23] "timeBodyGyroscopeMeanZ"                         
+[24] "timeBodyGyroscopeStdX"                          
+[25] "timeBodyGyroscopeStdY"                          
+[26] "timeBodyGyroscopeStdZ"                          
+[27] "timeBodyGyroscopeJerkMeanX"                     
+[28] "timeBodyGyroscopeJerkMeanY"                     
+[29] "timeBodyGyroscopeJerkMeanZ"                     
+[30] "timeBodyGyroscopeJerkStdX"                      
+[31] "timeBodyGyroscopeJerkStdY"                      
+[32] "timeBodyGyroscopeJerkStdZ"                      
+[33] "timeBodyAccelerometerMagnitudeMean"             
+[34] "timeBodyAccelerometerMagnitudeStd"              
+[35] "timeGravityAccelerometerMagnitudeMean"          
+[36] "timeGravityAccelerometerMagnitudeStd"           
+[37] "timeBodyAccelerometerJerkMagnitudeMean"         
+[38] "timeBodyAccelerometerJerkMagnitudeStd"          
+[39] "timeBodyGyroscopeMagnitudeMean"                 
+[40] "timeBodyGyroscopeMagnitudeStd"                  
+[41] "timeBodyGyroscopeJerkMagnitudeMean"             
+[42] "timeBodyGyroscopeJerkMagnitudeStd"              
+[43] "frequencyBodyAccelerometerMeanX"                
+[44] "frequencyBodyAccelerometerMeanY"                
+[45] "frequencyBodyAccelerometerMeanZ"                
+[46] "frequencyBodyAccelerometerStdX"                 
+[47] "frequencyBodyAccelerometerStdY"                 
+[48] "frequencyBodyAccelerometerStdZ"                 
+[49] "frequencyBodyAccelerometerJerkMeanX"            
+[50] "frequencyBodyAccelerometerJerkMeanY"            
+[51] "frequencyBodyAccelerometerJerkMeanZ"            
+[52] "frequencyBodyAccelerometerJerkStdX"             
+[53] "frequencyBodyAccelerometerJerkStdY"             
+[54] "frequencyBodyAccelerometerJerkStdZ"             
+[55] "frequencyBodyGyroscopeMeanX"                    
+[56] "frequencyBodyGyroscopeMeanY"                    
+[57] "frequencyBodyGyroscopeMeanZ"                    
+[58] "frequencyBodyGyroscopeStdX"                     
+[59] "frequencyBodyGyroscopeStdY"                     
+[60] "frequencyBodyGyroscopeStdZ"                     
+[61] "frequencyBodyAccelerometerMagnitudeMean"        
+[62] "frequencyBodyAccelerometerMagnitudeStd"         
+[63] "frequencyBodyBodyAccelerometerJerkMagnitudeMean"
+[64] "frequencyBodyBodyAccelerometerJerkMagnitudeStd" 
+[65] "frequencyBodyBodyGyroscopeMagnitudeMean"        
+[66] "frequencyBodyBodyGyroscopeMagnitudeStd"         
+[67] "frequencyBodyBodyGyroscopeJerkMagnitudeMean"    
+[68] "frequencyBodyBodyGyroscopeJerkMagnitudeStd"    
 ```      
 
 `subject [1]` - integer identifier of person who performed the activity for each window sample. Its range is from 1 to 30. 
 
-`activity [68]` - activity performed by subject: `WALKING`, `WALKING_UPSTAIRS`, `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, `LAYING`
+`activity [2]` - activity performed by subject: `WALKING`, `WALKING_UPSTAIRS`, `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, `LAYING`
 
 Other features were made using original features from source data set
 
@@ -116,25 +116,25 @@ Original features were renamed to a new set of features:
 
 |Original features|Transformed features|
 |-----------------|--------------------|
-| tBodyAcc mean,std XYZ | timeBodyAccelerometerMean XYZ [2,3,4], timeBodyAccelerometerStd XYZ [5,6,7] |
-| tGravityAcc mean,std XYZ | timeGravityAccelerometerMean XYZ [8,9,10], timeGravityAccelerometerStd XYZ [11,12,13] |
-| tBodyAccJerk mean,std XYZ | timeBodyAccelerometerJerkMean XYZ [14,15,16], timeBodyAccelerometerJerkStd XYZ [17,18,19] |
-| tBodyGyro mean,std XYZ | timeBodyGyroscopeMean XYZ [20,21,22], timeBodyGyroscopeStd XYZ [23,24,25] |
-| tBodyGyroJerk mean,std XYZ | timeBodyGyroscopeJerkMean XYZ [26,27,28], timeBodyGyroscopeJerkStd XYZ [29,30,31] |
-| tBodyAccMag mean,std | timeBodyAccelerometerMagnitudeMean [32], timeBodyAccelerometerMagnitudeStd [33] |
-| tGravityAccMag mean,std | timeGravityAccelerometerMagnitudeMean [34], timeGravityAccelerometerMagnitudeStd [35] |
-| tBodyAccJerkMag mean,std | timeBodyAccelerometerJerkMagnitudeMean [36], timeBodyAccelerometerJerkMagnitudeStd [37] |
-| tBodyGyroMag mean,std | timeBodyGyroscopeMagnitudeMean [38], timeBodyGyroscopeMagnitudeStd [39] |
-| tBodyGyroJerkMag mean,std | timeBodyGyroscopeJerkMagnitudeMean [40], timeBodyGyroscopeJerkMagnitudeStd [41] |
-| fBodyAcc mean,std XYZ | frequencyBodyAccelerometerMean XYZ [42,43,44], frequencyBodyAccelerometerStd XYZ [45,46,47] |
-| fBodyAccJerk mean,std XYZ | frequencyBodyAccelerometerJerkMean XYZ [48,49,50], frequencyBodyAccelerometerJerkStd XYZ [51,52,53] |
-| fBodyGyro mean,std XYZ | frequencyBodyGyroscopeMean XYZ [54,55,56], frequencyBodyGyroscopeStd [57,58,59] |
-| fBodyAccMag mean,std | frequencyBodyAccelerometerMagnitudeMean [60], frequencyBodyAccelerometerMagnitudeStd [61] |
-| fBodyBodyAccJerkMag mean,std | frequencyBodyBodyAccelerometerJerkMagnitudeMean [62], frequencyBodyBodyAccelerometerJerkMagnitudeStd [63] |
-| fBodyBodyGyroMag mean,std | frequencyBodyBodyGyroscopeMagnitudeMean [64], frequencyBodyBodyGyroscopeMagnitudeStd [65] |
-| fBodyBodyGyroJerkMag mean,std | frequencyBodyBodyGyroscopeJerkMagnitudeMean [66], frequencyBodyBodyGyroscopeJerkMagnitudeStd [67] |
+| tBodyAcc mean,std XYZ | timeBodyAccelerometerMean XYZ [3,4,5], timeBodyAccelerometerStd XYZ [6,7,8] |
+| tGravityAcc mean,std XYZ | timeGravityAccelerometerMean XYZ [9,10,11], timeGravityAccelerometerStd XYZ [12,13,14] |
+| tBodyAccJerk mean,std XYZ | timeBodyAccelerometerJerkMean XYZ [15,16,17], timeBodyAccelerometerJerkStd XYZ [18,19,20] |
+| tBodyGyro mean,std XYZ | timeBodyGyroscopeMean XYZ [21,22,23], timeBodyGyroscopeStd XYZ [24,25,26] |
+| tBodyGyroJerk mean,std XYZ | timeBodyGyroscopeJerkMean XYZ [27,28,29], timeBodyGyroscopeJerkStd XYZ [30,31,32] |
+| tBodyAccMag mean,std | timeBodyAccelerometerMagnitudeMean [33], timeBodyAccelerometerMagnitudeStd [34] |
+| tGravityAccMag mean,std | timeGravityAccelerometerMagnitudeMean [35], timeGravityAccelerometerMagnitudeStd [36] |
+| tBodyAccJerkMag mean,std | timeBodyAccelerometerJerkMagnitudeMean [37], timeBodyAccelerometerJerkMagnitudeStd [38] |
+| tBodyGyroMag mean,std | timeBodyGyroscopeMagnitudeMean [39], timeBodyGyroscopeMagnitudeStd [40] |
+| tBodyGyroJerkMag mean,std | timeBodyGyroscopeJerkMagnitudeMean [41], timeBodyGyroscopeJerkMagnitudeStd [42] |
+| fBodyAcc mean,std XYZ | frequencyBodyAccelerometerMean XYZ [43,44,45], frequencyBodyAccelerometerStd XYZ [46,47,48] |
+| fBodyAccJerk mean,std XYZ | frequencyBodyAccelerometerJerkMean XYZ [49,50,51], frequencyBodyAccelerometerJerkStd XYZ [52,53,54] |
+| fBodyGyro mean,std XYZ | frequencyBodyGyroscopeMean XYZ [55,56,57], frequencyBodyGyroscopeStd [58,59,60] |
+| fBodyAccMag mean,std | frequencyBodyAccelerometerMagnitudeMean [61], frequencyBodyAccelerometerMagnitudeStd [62] |
+| fBodyBodyAccJerkMag mean,std | frequencyBodyBodyAccelerometerJerkMagnitudeMean [63], frequencyBodyBodyAccelerometerJerkMagnitudeStd [64] |
+| fBodyBodyGyroMag mean,std | frequencyBodyBodyGyroscopeMagnitudeMean [65], frequencyBodyBodyGyroscopeMagnitudeStd [66] |
+| fBodyBodyGyroJerkMag mean,std | frequencyBodyBodyGyroscopeJerkMagnitudeMean [67], frequencyBodyBodyGyroscopeJerkMagnitudeStd [68] |
 
-Result is tidy data set contains average of each variable for each `activity [68]` and each `subject [1]`.
+Result is tidy data set contains average of each variable for each `activity [2]` and each `subject [1]`.
 
 
 
