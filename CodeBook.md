@@ -11,140 +11,76 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Script `run_analysis.R` will produce file `UCI_HAR_tidy.csv` that contains the following features:
 
-``` [1] "subject"                        
-                
+```
+[1] "subject"                                       
 [2] "timeBodyAccelerometerMeanX"                     
-
 [3] "timeBodyAccelerometerMeanY"                     
-
 [4] "timeBodyAccelerometerMeanZ"                     
-
 [5] "timeBodyAccelerometerStdX"                      
-
 [6] "timeBodyAccelerometerStdY"                      
-
 [7] "timeBodyAccelerometerStdZ"                      
-
 [8] "timeGravityAccelerometerMeanX"                  
-
 [9] "timeGravityAccelerometerMeanY"                  
-
-[10] "timeGravityAccelerometerMeanZ"                  
-
+[10] "timeGravityAccelerometerMeanZ"                 
 [11] "timeGravityAccelerometerStdX"                   
-
 [12] "timeGravityAccelerometerStdY"                   
-
 [13] "timeGravityAccelerometerStdZ"                   
-
 [14] "timeBodyAccelerometerJerkMeanX"                 
-
 [15] "timeBodyAccelerometerJerkMeanY"                 
-
 [16] "timeBodyAccelerometerJerkMeanZ"                 
-
 [17] "timeBodyAccelerometerJerkStdX"                  
-
 [18] "timeBodyAccelerometerJerkStdY"                  
-
 [19] "timeBodyAccelerometerJerkStdZ"                  
-
 [20] "timeBodyGyroscopeMeanX"                         
-
 [21] "timeBodyGyroscopeMeanY"                         
-
 [22] "timeBodyGyroscopeMeanZ"                         
-
 [23] "timeBodyGyroscopeStdX"                          
-
 [24] "timeBodyGyroscopeStdY"                          
-
 [25] "timeBodyGyroscopeStdZ"                          
-
 [26] "timeBodyGyroscopeJerkMeanX"                     
-
 [27] "timeBodyGyroscopeJerkMeanY"                     
-
 [28] "timeBodyGyroscopeJerkMeanZ"                     
-
 [29] "timeBodyGyroscopeJerkStdX"                      
-
 [30] "timeBodyGyroscopeJerkStdY"                      
-
 [31] "timeBodyGyroscopeJerkStdZ"                      
-
 [32] "timeBodyAccelerometerMagnitudeMean"             
-
 [33] "timeBodyAccelerometerMagnitudeStd"              
-
 [34] "timeGravityAccelerometerMagnitudeMean"          
-
 [35] "timeGravityAccelerometerMagnitudeStd"           
-
 [36] "timeBodyAccelerometerJerkMagnitudeMean"         
-
 [37] "timeBodyAccelerometerJerkMagnitudeStd"          
-
 [38] "timeBodyGyroscopeMagnitudeMean"                 
-
 [39] "timeBodyGyroscopeMagnitudeStd"                  
-
 [40] "timeBodyGyroscopeJerkMagnitudeMean"             
-
 [41] "timeBodyGyroscopeJerkMagnitudeStd"              
-
 [42] "frequencyBodyAccelerometerMeanX"                
-
 [43] "frequencyBodyAccelerometerMeanY"                
-
 [44] "frequencyBodyAccelerometerMeanZ"                
-
 [45] "frequencyBodyAccelerometerStdX"                 
-
 [46] "frequencyBodyAccelerometerStdY"                 
-
 [47] "frequencyBodyAccelerometerStdZ"                 
-
 [48] "frequencyBodyAccelerometerJerkMeanX"            
-
 [49] "frequencyBodyAccelerometerJerkMeanY"            
-
 [50] "frequencyBodyAccelerometerJerkMeanZ"            
-
 [51] "frequencyBodyAccelerometerJerkStdX"             
-
 [52] "frequencyBodyAccelerometerJerkStdY"             
-
 [53] "frequencyBodyAccelerometerJerkStdZ"             
-
 [54] "frequencyBodyGyroscopeMeanX"                    
-
 [55] "frequencyBodyGyroscopeMeanY"                    
-
 [56] "frequencyBodyGyroscopeMeanZ"                    
-
 [57] "frequencyBodyGyroscopeStdX"                     
-
 [58] "frequencyBodyGyroscopeStdY"                     
-
 [59] "frequencyBodyGyroscopeStdZ"                     
-
 [60] "frequencyBodyAccelerometerMagnitudeMean"        
-
 [61] "frequencyBodyAccelerometerMagnitudeStd"         
-
 [62] "frequencyBodyBodyAccelerometerJerkMagnitudeMean"
-
 [63] "frequencyBodyBodyAccelerometerJerkMagnitudeStd" 
-
 [64] "frequencyBodyBodyGyroscopeMagnitudeMean"        
-
 [65] "frequencyBodyBodyGyroscopeMagnitudeStd"         
-
 [66] "frequencyBodyBodyGyroscopeJerkMagnitudeMean"    
-[67] "frequencyBodyBodyGyroscopeJerkMagnitudeStd"     
-
-[68] "activity"     ```      
+[67] "frequencyBodyBodyGyroscopeJerkMagnitudeStd"    
+[68] "activity"     
+```      
 
 `subject [1]` - integer identifier of person who performed the activity for each window sample. Its range is from 1 to 30. 
 
