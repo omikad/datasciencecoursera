@@ -53,18 +53,18 @@ getData()
 # 1. Merge the training and the test sets to create one data set.
 dataSet <- mergeParts(readPart("test"), readPart("train"))
 
-# Make good labels
 names(dataSet$subject) <- "subject"
 names(dataSet$activity) <- "activity"
 
+# 2. Extract only the measurements on the mean and standard deviation for each measurement.
 # Make valid names from loaded feature names and apply them
 featuresData <- read.table("UCI HAR Dataset/features.txt", header=FALSE, stringsAsFactors=FALSE)
 names(featuresData) <- c("rowindex", "feature")
-names(dataSet$features)[featuresData$rowindex] <- make.names(featuresData$feature, unique=TRUE)
 
-# 2. Extract only the measurements on the mean and standard deviation for each measurement.
-# feature name like 'mean()' was converted to 'mean..' on previous step
-dataSet$features <- select(dataSet$features, matches("mean\\.|std\\."))
+# Filter feature rows and apply them as column names
+featuresData <- filter(featuresData, grepl("mean\\(|std\\(", featuresData$feature))
+names(dataSet$features)[featuresData$rowindex] <- make.names(featuresData$feature, unique=TRUE)
+dataSet$features <- dataSet$features[,featuresData$rowindex]
 
 # 3. Use descriptive activity names to name the activities in the data set
 activityNames <- read.table("UCI HAR Dataset/activity_labels.txt", header=FALSE)
@@ -75,16 +75,16 @@ dataSet$activity <- activityNames[match(dataSet$activity$activity, activityNames
 dataSet<- do.call(cbind, dataSet)
 
 dataSet <- (dataSet 
-  %>% setNames(gsub(".mean", ".Mean", names(.)))
-  %>% setNames(gsub(".std", ".Std", names(.)))
-  %>% setNames(gsub("Acc", "Accelerometer", names(.)))
-  %>% setNames(gsub("Gyro", "Gyroscope", names(.)))
-  %>% setNames(gsub("gravity", "Gravity", names(.)))
-  %>% setNames(gsub("Mag", "Magnitude", names(.)))
-  %>% setNames(gsub("angle.t", "tAngle", names(.)))
-  %>% setNames(gsub("features\\.|(\\.)+", "", names(.)))
-  %>% setNames(gsub("^t", "time", names(.)))
-  %>% setNames(gsub("^f", "frequency", names(.)))
+            %>% setNames(gsub(".mean", ".Mean", names(.)))
+            %>% setNames(gsub(".std", ".Std", names(.)))
+            %>% setNames(gsub("Acc", "Accelerometer", names(.)))
+            %>% setNames(gsub("Gyro", "Gyroscope", names(.)))
+            %>% setNames(gsub("gravity", "Gravity", names(.)))
+            %>% setNames(gsub("Mag", "Magnitude", names(.)))
+            %>% setNames(gsub("angle.t", "tAngle", names(.)))
+            %>% setNames(gsub("features\\.|(\\.)+", "", names(.)))
+            %>% setNames(gsub("^t", "time", names(.)))
+            %>% setNames(gsub("^f", "frequency", names(.)))
 )
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average
@@ -92,6 +92,9 @@ dataSet <- (dataSet
 summaryData <- (dataSet %>% group_by(activity, subject) %>% summarize_each(funs(mean)))
 
 write.csv(summaryData, "UCI_HAR_tidy.csv")
+
+# This instruction creates file to submit
+# write.table(summaryData, "ToSubmit.txt", row.name=FALSE)
 
 
 
